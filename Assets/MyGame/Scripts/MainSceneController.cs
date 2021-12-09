@@ -5,23 +5,17 @@ public class MainSceneController : MonoBehaviour
 {
     [SerializeField] private InputField inputFieldTermA, inputFieldTermB;
     [SerializeField] private Text txtResult;
-    public bool testing;
+    [SerializeField] private GameObject resetBtn;
+    private int termA, termB;
 
     public int CheckAddition(int summandA, int summandB)
     {
         int result = 0;
-        testing = false;
 
         result = summandA + summandB;
 
+        txtResult.text = string.Format("{0}", result);
         return result;
-    }
-
-    void Start()
-    {
-        int val1 = CheckAddition(1,2);
-        int val2 = CheckAddition(10,20);
-        int val3 = CheckAddition(100,200);
     }
 
     public void GetValues()
@@ -33,11 +27,14 @@ public class MainSceneController : MonoBehaviour
         Debug.Log("Methode GetValues wird ausgeführt: " + CheckAddition(int.Parse(termA), int.Parse(termB)));
     }
 
-    void Update()
+    public void ResetBtn()
     {
-        if (testing)
-        {
-            GetValues();
-        }
+        inputFieldTermA.text = string.Empty;
+        inputFieldTermB.text = string.Empty;
+        txtResult.text = "";
+
+        termA = 0;
+        termB = 0;
     }
+
 }

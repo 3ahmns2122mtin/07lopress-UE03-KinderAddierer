@@ -483,7 +483,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Result
+  m_Text: 
 --- !u!222 &189748894
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -491,7 +491,7 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 189748891}
-  m_CullTransparentMesh: 0
+  m_CullTransparentMesh: 1
 --- !u!1 &294431607
 GameObject:
   m_ObjectHideFlags: 0
@@ -570,7 +570,7 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 294431607}
-  m_CullTransparentMesh: 0
+  m_CullTransparentMesh: 1
 --- !u!1 &423821658
 GameObject:
   m_ObjectHideFlags: 0
@@ -652,7 +652,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 423821661}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2074562366}
+        m_TargetAssemblyTypeName: MainSceneController, Assembly-CSharp
+        m_MethodName: ResetBtn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &423821661
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1730,7 +1742,7 @@ MonoBehaviour:
   inputFieldTermA: {fileID: 1008537998}
   inputFieldTermB: {fileID: 848921601}
   txtResult: {fileID: 189748893}
-  testing: 0
+  resetBtn: {fileID: 0}
 --- !u!4 &2074562367
 Transform:
   m_ObjectHideFlags: 0
